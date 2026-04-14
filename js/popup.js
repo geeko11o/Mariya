@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
       let gender = document.getElementById("gender").value;
       let profession = document.getElementById("profession").value;
 
-      let message = `Hello Geeta Ma’am,%0AI am interested in your program.%0A%0AHere are my details:%0AName: ${name}%0APhone: ${phone}%0AAge: ${age}%0AGender: ${gender}%0AProfession: ${profession}%0A%0APlease tell me what I have to do next.%0AThank you!`;
+      let message = `Hello Mariya Ma’am,%0AI am interested in your program.%0A%0AHere are my details:%0AName: ${name}%0APhone: ${phone}%0AAge: ${age}%0AGender: ${gender}%0AProfession: ${profession}%0A%0APlease tell me what I have to do next.%0AThank you!`;
 
       // Close popup before redirect
       document.getElementById("mentorModal").style.display = "none";
