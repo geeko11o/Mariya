@@ -1,0 +1,92 @@
+/* =====================================================
+   LIGHT MODE OVERRIDES
+===================================================== */
+[data-theme="light"] {
+  --bg-main: #f8fafc;
+  --bg-white: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --border-soft: #e2e8f0;
+
+  background: var(--bg-main);
+  color: var(--text-main);
+}
+
+[data-theme="light"] .hero { background: var(--bg-main); }
+[data-theme="light"] .section.light { background: var(--bg-white); }
+[data-theme="light"] .story-image { 
+  background: var(--bg-white); 
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.5); 
+}
+
+/* Base body */
+[data-theme="light"] body {
+  background: var(--bg-main);
+  color: var(--text-main);
+}
+
+/* FAQ */
+[data-theme="light"] details { 
+  background: rgba(255, 255, 255, 0.8); 
+  border: 1px solid var(--border-soft); 
+}
+[data-theme="light"] details[open] { 
+  background: var(--bg-white); 
+  box-shadow: 0 10px 30px rgba(6, 182, 212, 0.1), 0 0 10px rgba(37, 99, 235, 0.05); 
+}
+[data-theme="light"] details summary { color: var(--text-main); }
+[data-theme="light"] details p { color: var(--text-muted); }
+
+/* Popup Form */
+[data-theme="light"] .mentor-modal { background: rgba(255, 255, 255, 0.4); }
+[data-theme="light"] .mentor-modal-box { 
+  background: rgba(255, 255, 255, 0.95); 
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15); 
+  border: 1px solid var(--border-soft); 
+}
+[data-theme="light"] .mentor-title { color: var(--text-main); }
+/* Subtitle in the strip stays white because the strip has the primary blue gradient */
+[data-theme="light"] .mentor-modal-box .mentor-subtitle { color: rgba(255, 255, 255, 0.9); }
+[data-theme="light"] .mentor-close { color: var(--text-main); background: #e2e8f0; border-color: #cbd5e1;}
+[data-theme="light"] .mentor-close:hover { background: rgba(239, 68, 68, 0.1); border-color: rgba(239, 68, 68, 1); color: #ef4444; }
+[data-theme="light"] .mentor-modal-box form { background: transparent; }
+[data-theme="light"] .field label { color: var(--text-muted); }
+[data-theme="light"] .field input, [data-theme="light"] .field select { 
+  background: #f1f5f9; 
+  color: var(--text-main); 
+  border-color: #cbd5e1; 
+}
+[data-theme="light"] .field input:focus, [data-theme="light"] .field select:focus {
+  background: var(--bg-white);
+}
+[data-theme="light"] .field input::placeholder { color: #94a3b8; }
+
+/* Headings and Text */
+[data-theme="light"] .hero h1 { 
+  background: linear-gradient(135deg, #0f172a, #334155); 
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  -webkit-text-fill-color: transparent;
+}
+[data-theme="light"] .section h2 { color: #06B6D4; }
+[data-theme="light"] .section p, 
+[data-theme="light"] .tick-list li, 
+[data-theme="light"] .support-list li { 
+  color: var(--text-muted); 
+}
+
+/* Marquee / Cards */
+[data-theme="light"] .image-item, 
+[data-theme="light"] .certificate-item { 
+  background: var(--bg-white); 
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.12); 
+}
+[data-theme="light"] .video-item { 
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.15); 
+}
+[data-theme="light"] .active-card { 
+  box-shadow: 0 24px 50px rgba(37, 99, 235, 0.25); 
+}
+
+/* Notice: We explicitly do NOT touch .cta 
+   so it stays a high-converting Premium Dark Section in Light Mode! */

@@ -1,0 +1,58 @@
+/* =====================================================
+   FAQ – DROPDOWN (CUSTOM ARROW)
+   STRUCTURE + BEHAVIOUR ONLY
+===================================================== */
+
+details {
+  max-width: 860px;
+  margin: 14px auto;
+  padding: 16px 20px;
+
+  background: rgba(21, 26, 36, 0.6); /* Translucent base for Glassmorphism */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 16px;
+  border: 1px solid #2C3545;
+
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/* open state visual feedback */
+details[open] {
+  background: rgba(21, 26, 36, 0.8);
+  box-shadow: 0 10px 30px rgba(6, 182, 212, 0.15), 0 0 10px rgba(37, 99, 235, 0.1);
+}
+
+/* summary row layout */
+details summary {
+  cursor: pointer;
+
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* remove native marker */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* custom arrow (visual only) */
+details summary::before {
+  content: "▶";
+  font-size: 12px;
+  color: #06B6D4;
+  transition: transform 0.25s ease;
+}
+
+/* rotate arrow when open */
+details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+/* answer spacing */
+details p {
+  margin-top: 12px;
+}
