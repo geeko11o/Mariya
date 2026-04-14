@@ -174,36 +174,4 @@
   box-shadow: 0 12px 25px rgba(37, 99, 235, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
-/* =====================================================
-   MOBILE OPTIMIZATION
-===================================================== */
-@media (max-width: 480px) {
-  .mentor-modal {
-    padding: 15px; /* Less outer padding so box is larger */
-  }
-  
-  .mentor-modal-box {
-    border-radius: 16px;
-  }
 
-  .mentor-modal-box .header-strip {
-    padding: 30px 20px 15px; /* Tighter header */
-  }
-
-  .mentor-modal-box form {
-    padding: 15px 20px 25px; /* Tighter form area */
-  }
-
-  .two-col {
-    flex-direction: column; /* Stack Age & Gender vertically */
-    gap: 0;
-  }
-
-  .field input, .field select {
-    padding: 13px 15px; /* Slightly slimmer inputs */
-  }
-
-  .mentor-title {
-    font-size: 22px !important;
-  }
-}

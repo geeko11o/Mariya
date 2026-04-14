@@ -72,17 +72,4 @@
   -webkit-text-fill-color: transparent;
 }
 
-/* =====================================================
-   MOBILE OPTIMIZATION (FULL WIDTH BUTTONS)
-===================================================== */
-@media (max-width: 480px) {
-  .hero-btn, 
-  .story-btn, 
-  .cta .btn {
-    width: 100%;
-    max-width: 320px;
-    padding: 15px 20px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
+

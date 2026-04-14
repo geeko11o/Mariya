@@ -20,8 +20,8 @@
 /* ---------------- HERO VIDEO ---------------- */
 .video-box {
   width: 100%;
-  max-width: 380px;
-  aspect-ratio: 16 / 9;
+  max-width: 240px;  /* Slightly smaller scale per user request */
+  aspect-ratio: 9 / 16; /* Adaptive vertical size */
   margin: 30px auto 0;
 
   background: #000;
@@ -180,7 +180,6 @@ ul {
 /* ---------------- MOBILE ---------------- */
 @media (max-width: 768px) {
   .video-box {
-    max-width: 100%;
     margin-top: 20px;
   }
   .cta {
