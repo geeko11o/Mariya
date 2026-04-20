@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Numeric-only enforcement for phone field
   const phoneInput = document.getElementById("phone");
   if (phoneInput) {
-    phoneInput.addEventListener("input", function (e) {
+    phoneInput.addEventListener("input", function () {
       this.value = this.value.replace(/[^0-9]/g, "");
     });
   }
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("mentorModal").style.display = "none";
 
       // Open WhatsApp
-      window.open(`https://wa.me/917780826099?text=${message}`, "_blank");
+      window.open(`https://wa.me/${APP_CONFIG.whatsappNumber}?text=${message}`, "_blank");
     });
   }
 
