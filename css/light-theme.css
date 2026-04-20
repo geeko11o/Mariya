@@ -15,8 +15,9 @@
 [data-theme="light"] .hero { background: var(--bg-main); }
 [data-theme="light"] .section.light { background: var(--bg-white); }
 [data-theme="light"] .story-image { 
-  background: var(--bg-white); 
-  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.5); 
+  background: #ffffff; 
+  border: none;
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.12); 
 }
 
 /* Base body */
@@ -88,5 +89,7 @@
   box-shadow: 0 24px 50px rgba(37, 99, 235, 0.25); 
 }
 
-/* Notice: We explicitly do NOT touch .cta 
-   so it stays a high-converting Premium Dark Section in Light Mode! */
+/* Override CTA background for Light Mode to use a strong premium gradient */
+[data-theme="light"] .cta {
+  background: linear-gradient(135deg, #020617 0%, #1e3a8a 40%, #2563eb 100%);
+}

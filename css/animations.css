@@ -2,8 +2,8 @@
    SURFACE ANIMATIONS (SCROLL FADE-IN)
 ===================================================== */
 
-/* Sections start hidden if observer is supported */
-.section {
+/* Sections start hidden only when JS is available */
+.js-ready .section {
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1),
@@ -12,20 +12,16 @@
 }
 
 /* Entry state when visible */
-.section.reveal {
+.js-ready .section.reveal {
     opacity: 1;
     transform: translateY(0);
 }
 
 /* Staggering (Subtle delay per section type) */
-.section.light {
+.js-ready .section.light {
     transition-delay: 0.1s;
 }
 
-.team-results {
+.js-ready .team-results {
     transition-delay: 0.15s;
-}
-
-.certificates {
-    transition-delay: 0.2s;
 }

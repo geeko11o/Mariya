@@ -9,7 +9,7 @@
 
 .video-marquee,
 .image-marquee,
-.certificate-marquee {
+.cert-video-marquee {
   overflow-x: auto;
   overflow-y: visible;
   -webkit-overflow-scrolling: touch;
@@ -29,7 +29,7 @@
 
 .video-marquee::-webkit-scrollbar,
 .image-marquee::-webkit-scrollbar,
-.certificate-marquee::-webkit-scrollbar {
+.cert-video-marquee::-webkit-scrollbar {
   display: none;
 }
 
@@ -39,7 +39,7 @@
 
 .video-track,
 .image-track,
-.certificate-track {
+.cert-video-track {
   display: flex;
   gap: 30px;
   width: max-content;
@@ -109,26 +109,7 @@
   width: 100%;
   height: 100%;
   display: block;
-}
-
-/* =====================================================
-   CERTIFICATE CARDS
-===================================================== */
-
-.certificate-item {
-  width: 260px;
-  background: #fff;
-  border-radius: 16px;
-  overflow: hidden;
-
-  box-shadow: 0 16px 36px rgba(37, 99, 235, 0.25);
-  position: relative;
-}
-
-.certificate-item img {
-  width: 100%;
-  height: auto;
-  display: block;
+  object-fit: cover;
 }
 
 /* =====================================================
@@ -136,8 +117,7 @@
 ===================================================== */
 
 .video-item,
-.image-item,
-.certificate-item {
+.image-item {
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
@@ -151,8 +131,7 @@
    IMAGE ZOOM PROTECTION
 ===================================================== */
 
-.image-item img,
-.certificate-item img {
+.image-item img {
   transform: none !important;
 }
 
@@ -160,9 +139,10 @@
    VIDEO MARQUEE – SCROLL LOCK ONLY HERE
 ===================================================== */
 
-.video-marquee {
-  overflow: hidden;     /* horizontal band */
-  touch-action: pan-y;  /* ✅ vertical page scroll allowed */
+.video-marquee,
+.cert-video-marquee {
+  overflow: hidden;
+  touch-action: pan-y;
 }
 
 /* =====================================================
@@ -171,17 +151,13 @@
 @media (max-width: 768px) {
   .video-marquee,
   .image-marquee,
-  .certificate-marquee {
-    height: 400px; /* Reduced container height */
+  .cert-video-marquee {
+    height: 400px;
   }
 
   .video-item,
   .image-item {
-    width: 180px; /* Smaller cards to fit better */
-  }
-
-  .certificate-item {
-    width: 220px;
+    width: 180px;
   }
 
   .active-card {

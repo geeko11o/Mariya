@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var imageTrack = document.querySelector('.image-track');
   if (imageTrack) {
     imageTrack.innerHTML = RESULT_IMAGES.map(function (src) {
-      return '<div class="image-item"><img src="' + src + '" alt=""></div>';
+      return '<div class="image-item"><img src="' + src + '" alt="Team result" loading="lazy"></div>';
     }).join('');
   }
 

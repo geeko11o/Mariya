@@ -13,6 +13,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Mariya Showkat – Mentorship</title>
+  <meta name="description" content="Learn high-demand digital skills with Mariya Showkat. Join 2000+ students who built confidence and financial independence from home. Apply now for personal mentorship.">
+
+  <!-- Open Graph (Facebook / WhatsApp / Instagram preview) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mariya Showkat – Digital Mentorship">
+  <meta property="og:description" content="Learn high-demand digital skills with Mariya Showkat. Join 2000+ students who built confidence and financial independence from home.">
+  <meta property="og:image" content="assets/my_story.jpg">
+  <meta property="og:locale" content="en_IN">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/popup.css">
@@ -46,15 +55,14 @@
   <!-- ================= HERO ================= -->
   <section class="hero">
     <h1>
-      It's Time to Learn the Right Digital Skills & Build<br>
-      Your Confidence Online
+      It's Time to Learn the Right Digital Skills & Build Your Confidence Online
     </h1>
 
     <div class="video-box">
-      <iframe id="hero-video" src="" frameborder="0" allowfullscreen></iframe>
+      <iframe id="hero-video" src="about:blank" frameborder="0" allowfullscreen></iframe>
     </div>
 
-    <a class="btn hero-btn" id="openMentorFormHero">
+    <a class="btn hero-btn" id="openMentorFormHero" href="javascript:void(0)" role="button">
       Apply Now For Mentorship
     </a>
   </section>
@@ -84,9 +92,9 @@
     </p>
 
 
-    <img id="story-image" src="" alt="Mariya Showkat Success Story" class="story-image">
+    <img id="story-image" alt="Mariya Showkat Success Story" class="story-image">
 
-    <a class="btn story-btn" id="openMentorFormStory">
+    <a class="btn story-btn" id="openMentorFormStory" href="javascript:void(0)" role="button">
       Apply Now For Mentorship
     </a>
   </section>
@@ -95,10 +103,8 @@
   <section class="section light testimonials">
     <h2>What People Are Saying?</h2>
 
-    <div class="marquee-wrapper">
-      <div class="video-marquee">
-        <div class="video-track"></div>
-      </div>
+    <div class="video-marquee">
+      <div class="video-track"></div>
     </div>
   </section>
 
@@ -115,10 +121,8 @@
   <section class="section light student-videos">
     <h2>What Students Are Saying?</h2>
 
-    <div class="marquee-wrapper">
-      <div class="video-marquee cert-video-marquee">
-        <div class="video-track cert-video-track"></div>
-      </div>
+    <div class="video-marquee cert-video-marquee">
+      <div class="video-track cert-video-track"></div>
     </div>
   </section>
 
@@ -196,7 +200,7 @@
       Message me on WhatsApp with your details.
     </p>
 
-    <a class="btn" id="openMentorFormCTA">
+    <a class="btn" id="openMentorFormCTA" href="javascript:void(0)" role="button">
       <span>Message Me on WhatsApp</span>
     </a>
 
@@ -294,6 +298,9 @@
       new MarqueeEngine('.video-marquee', { speed: 0.6, direction: 'left', type: 'video' });
       new MarqueeEngine('.image-marquee', { speed: 1.0, direction: 'right' });
       new MarqueeEngine('.cert-video-marquee', { speed: 1.0, direction: 'left', type: 'video' });
+
+      // Mark JS as available — enables scroll reveal CSS
+      document.documentElement.classList.add('js-ready');
 
       // Premium Scroll Reveal
       const observerOptions = { threshold: 0.15 };
