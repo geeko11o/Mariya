@@ -2,7 +2,7 @@
 //  META PIXEL — sirf PIXEL_ID badlo, bas.
 // =====================================================
 
-var PIXEL_ID = '1366355801331776';
+var PIXEL_ID = '4317944608477154';
 
 // Noscript fallback (dynamically injected)
 var ns = document.createElement('noscript');
