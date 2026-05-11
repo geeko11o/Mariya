@@ -43,15 +43,20 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
 
       let name = document.getElementById("fullName").value;
-      let phone = document.getElementById("phone").value;
+      // let phone = document.getElementById("phone").value;
       let age = document.getElementById("age").value;
-      let gender = document.getElementById("gender").value;
+      // let gender = document.getElementById("gender").value;
       let profession = document.getElementById("profession").value;
 
-      let message = `Hello Mariya Ma’am,%0AI am interested in your program.%0A%0AHere are my details:%0AName: ${name}%0APhone: ${phone}%0AAge: ${age}%0AGender: ${gender}%0AProfession: ${profession}%0A%0APlease tell me what I have to do next.%0AThank you!`;
+      let message = `Hello Mariya Ma’am,%0AI am interested in your program.%0A%0AHere are my details:%0AName: ${name}%0AAge: ${age}%0AProfession: ${profession}%0A%0APlease tell me what I have to do next.%0AThank you!`;
 
       // Close popup before redirect
       document.getElementById("mentorModal").style.display = "none";
+
+      // Meta Pixel Tracking (Add this for tracking)
+      if (typeof fbq !== 'undefined') {
+        fbq('track', 'Lead');
+      }
 
       // Open WhatsApp
       window.open(`https://wa.me/${APP_CONFIG.whatsappNumber}?text=${message}`, "_blank");
